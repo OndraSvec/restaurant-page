@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
 :root {
   --main-color: #fbbf24;
   --main-color-transparent: rgba(251, 190, 36, 0.5);
