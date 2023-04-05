@@ -9,6 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
 }
 
 .navBar > ul {
@@ -41,7 +43,7 @@
 
 .navBar > ul > li > a.menuElementActive {
   font-size: var(--fs-nav-hover);
-  border-bottom: calc(var(--fs-nav) * 0.15) solid var(--main-color);
+  border-bottom: calc(var(--fs-nav) * 0.2) solid var(--main-color);
   color: var(--main-color);
 }
 
