@@ -9,6 +9,9 @@
 :root {
   --main-color: #fbbf24;
   --main-color-transparent: rgba(251, 190, 36, 0.5);
+  --fs-h1: clamp(1.4rem, 1.4rem + 3vw, 4rem);
+  --fs-h2: clamp(1.4rem * 0.8, (1.4rem + 3vw) * 0.8, 4rem * 0.8);
+  --main-gap: 1rem;
 }
 
 html {
@@ -19,16 +22,34 @@ html {
 
 body {
   flex-grow: 1;
+  font-family: sans-serif;
 }
 
 .container {
+  padding: 1rem;
   width: 100%;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--main-gap);
   color: var(--main-color);
   background-image: url(../../assets/restaurant.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  text-align: center;
+}
+
+.container > h1,
+.container > h2 {
+  font-size: var(--fs-h1);
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
+}
+
+.container > h2 {
+  font-size: var(--fs-h2);
+  -webkit-text-stroke-width: 1px;
 }
