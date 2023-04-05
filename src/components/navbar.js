@@ -1,5 +1,5 @@
 import "../styles/navbar.css";
-import homePageLoad from "..";
+import { homePageLoad, menuPageLoad, contactPageLoad } from "..";
 
 export default function navBar() {
   const navigationBar = document.createElement("nav");
@@ -36,5 +36,9 @@ export default function navBar() {
 function handleClick(e) {
   if (e.target.textContent === "home") {
     homePageLoad();
+  } else if (e.target.textContent === "menu") {
+    menuPageLoad();
+  } else {
+    contactPageLoad();
   }
 }
