@@ -15,7 +15,10 @@
   --main-color: #fbbf24;
   --main-color-transparent: rgba(251, 190, 36, 0.5);
   --fs-h1: clamp(1.4rem, 1.4rem + 3vw, 4rem);
-  --fs-h2: clamp(1.4rem * 0.8, (1.4rem + 3vw) * 0.8, 4rem * 0.8);
+  --fs-h2: calc(var(--fs-h1) * 0.8);
+  --fs-h3: calc(var(--fs-h1) * 0.5);
+  --fs-m-dish: calc(var(--fs-h1) * 0.4);
+  --fs-m-ingredients: calc(var(--fs-h1) * 0.3);
   --fs-nav: clamp(0.75rem, 0.75rem + 3vw, 1.75rem);
   --fs-nav-hover: calc(var(--fs-nav) * 1.2);
   --main-gap: 1rem;
@@ -42,7 +45,8 @@ body {
   align-items: center;
   gap: var(--main-gap);
   color: var(--main-color);
-  background-image: url(../../assets/restaurant.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.227), rgba(0, 0, 0, 0.2)),
+    url(../../assets/restaurant.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

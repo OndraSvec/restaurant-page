@@ -1,16 +1,71 @@
 .menu-container {
   padding: 1rem;
+  padding-top: 5rem;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: var(--main-gap);
-  color: var(--main-color);
-  background-image: url(../../assets/food.jpg);
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.4)),
+    url(../../assets/food.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
+}
+
+.menu-header {
+  font-size: var(--fs-h1);
+}
+
+.menu-container > .flex-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-m-dish);
+  gap: var(--main-gap);
+  padding: 1.5rem;
+  background-color: var(--main-color-transparent);
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+  min-height: 100%;
+  width: 80%;
+}
+
+.menu-container > .flex-menu h3 {
+  font-size: var(--fs-h3);
+}
+
+.menu-container > .flex-menu > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: calc(var(--main-gap) * 1.2);
+}
+
+.menu-container > .flex-menu > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: calc(var(--main-gap) * 0.4);
+}
+
+.menu-container > .flex-menu > div .ingredients {
+  font-size: var(--fs-m-ingredients);
+}
+
+@media screen and (min-width: 900px) {
+  .menu-container {
+    gap: calc(var(--main-gap) * 4);
+  }
+  .menu-container > .flex-menu {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
 }
