@@ -15,9 +15,34 @@
   display: flex;
   gap: clamp(0.5rem, 0.5rem + 3vw, 3rem);
   list-style: none;
+}
+
+.navBar > ul > li {
+  display: flex;
+  height: 4rem;
+}
+
+.navBar > ul > li > a {
+  display: grid;
+  place-items: center;
   text-transform: uppercase;
-  font-size: clamp(0.75rem, 0.75rem + 3vw, 1.75rem);
+  font-size: var(--fs-nav);
+  height: 100%;
   font-weight: 700;
+  transition: font-size 0.33s ease-in;
+}
+
+.navBar > ul > li > a:hover,
+.navBar > ul > li > a:focus {
+  font-size: var(--fs-nav-hover);
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.navBar > ul > li > a.menuElementActive {
+  font-size: var(--fs-nav-hover);
+  border-bottom: calc(var(--fs-nav) * 0.15) solid var(--main-color);
+  color: var(--main-color);
 }
 
 @media screen and (min-width: 600px) {

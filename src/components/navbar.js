@@ -1,4 +1,5 @@
 import "../styles/navbar.css";
+import homePageLoad from "..";
 
 export default function navBar() {
   const navigationBar = document.createElement("nav");
@@ -24,7 +25,16 @@ export default function navBar() {
 
   [homeLi, menuLi, contactLi].forEach((element) => UL.appendChild(element));
 
+  [homeA, menuA, contactA].forEach((element) =>
+    element.addEventListener("click", handleClick)
+  );
+
   navigationBar.appendChild(UL);
 
   return navigationBar;
+}
+function handleClick(e) {
+  if (e.target.textContent === "home") {
+    homePageLoad();
+  }
 }

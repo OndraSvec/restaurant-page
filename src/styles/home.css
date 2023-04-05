@@ -16,6 +16,8 @@
   --main-color-transparent: rgba(251, 190, 36, 0.5);
   --fs-h1: clamp(1.4rem, 1.4rem + 3vw, 4rem);
   --fs-h2: clamp(1.4rem * 0.8, (1.4rem + 3vw) * 0.8, 4rem * 0.8);
+  --fs-nav: clamp(0.75rem, 0.75rem + 3vw, 1.75rem);
+  --fs-nav-hover: calc(var(--fs-nav) * 1.2);
   --main-gap: 1rem;
 }
 
