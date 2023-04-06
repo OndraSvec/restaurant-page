@@ -18,6 +18,7 @@
 
 .contact-container > .paraHeader {
   font-size: var(--fs-h1);
+  font-weight: 700;
 }
 
 .contact-container > .mapContainer {
@@ -44,6 +45,22 @@
   -webkit-backdrop-filter: blur(0.75rem);
   min-height: 100%;
   width: 100%;
+}
+
+.contact-container > .contact-info > div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  gap: calc(var(--main-gap) * 0.8);
+}
+
+.contact-container > .contact-info > div > p:nth-child(1) {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+}
+
+.contact-container > .contact-info > div > p:nth-child(2) {
+  font-size: var(--fs-m-dish);
 }
 
 @media screen and (min-width: 900px) {

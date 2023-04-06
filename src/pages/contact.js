@@ -21,8 +21,25 @@ export default function contactPage() {
   contactInfo.classList.add("contact-info");
 
   const location = document.createElement("div");
+  const locPara1 = document.createElement("p");
+  locPara1.textContent = "Location";
+  const locPara2 = document.createElement("p");
+  locPara2.textContent = "Teahupoo, Taiarapu-Ouest, French Polynesia";
+  [locPara1, locPara2].forEach((element) => location.appendChild(element));
+
   const openingHours = document.createElement("div");
+  const ohPara1 = document.createElement("p");
+  ohPara1.textContent = "Opening Hours";
+  const ohPara2 = document.createElement("p");
+  ohPara2.textContent = "Every Day, 8:00-22:00";
+  [ohPara1, ohPara2].forEach((element) => openingHours.appendChild(element));
+
   const contact = document.createElement("div");
+  const conPara1 = document.createElement("p");
+  conPara1.textContent = "Contact";
+  const conPara2 = document.createElement("p");
+  conPara2.textContent = "yourfavouriterestaurant@yfr.com";
+  [conPara1, conPara2].forEach((element) => contact.appendChild(element));
 
   [location, openingHours, contact].forEach((element) =>
     contactInfo.appendChild(element)
