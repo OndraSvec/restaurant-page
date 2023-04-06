@@ -15,3 +15,10 @@
   background-position: center;
   text-align: center;
 }
+
+.contact-container > .paraHeader {
+  font-size: var(--fs-h1);
+}
+
+.contact-container > .mapContainer {
+}
