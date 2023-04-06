@@ -33,7 +33,7 @@
   backdrop-filter: blur(0.75rem);
   -webkit-backdrop-filter: blur(0.75rem);
   min-height: 100%;
-  width: 80%;
+  width: 100%;
 }
 
 .menu-container > .flex-menu h3 {
@@ -67,5 +67,6 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
+    width: 80%;
   }
 }

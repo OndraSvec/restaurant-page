@@ -17,7 +17,18 @@ export default function contactPage() {
   );
   mapContainer.appendChild(mapFrame);
 
-  [paraHeader, mapContainer].forEach((element) =>
+  const contactInfo = document.createElement("div");
+  contactInfo.classList.add("contact-info");
+
+  const location = document.createElement("div");
+  const openingHours = document.createElement("div");
+  const contact = document.createElement("div");
+
+  [location, openingHours, contact].forEach((element) =>
+    contactInfo.appendChild(element)
+  );
+
+  [paraHeader, mapContainer, contactInfo].forEach((element) =>
     container.appendChild(element)
   );
   return container;
